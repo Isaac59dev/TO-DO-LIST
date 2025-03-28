@@ -1,0 +1,130 @@
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #1e1e2e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Caixa central */
+.container {
+    background-color: #2a2a3b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Caixa de entrada de tarefa */
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #3b3b4f;
+    color: #fff;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Lista de tarefas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilizando cada tarefa */
+li {
+    display: flex;
+    align-items: center;
+    background-color: #3b3b4f;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+/* Estilizando a checkbox customizada */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.checkbox-container input:checked + .checkbox-custom {
+    background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+}
+
+.checkbox-container input:checked + .checkbox-custom::after {
+    content: "✔";
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Tarefa concluída */
+.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+/* Ícone de exclusão */
+.delete {
+    cursor: pointer;
+    color: #ff6347;
+    font-size: 20px;
+}
